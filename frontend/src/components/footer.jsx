@@ -8,19 +8,19 @@ export const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-xl bg-gradient-to-br from-travel-blue to-travel-purple">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-travel-blue to-travel-purple bg-clip-text text-transparent">
-                WanderMind
-              </span>
+              <div className="p-2 rounded-xl bg-gradient-to-br from-blue-300 via-blue-500 to-purple-400">
+              <Globe className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-purple-400 bg-clip-text text-transparent">
+              WanderMind
+            </span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Your AI-powered travel companion that makes exploring the world smarter, easier, and more personalized than ever before.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="p-2 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                <Facebook className="w-5 h-5 text-travel-blue" />
+                <Facebook className="w-5 h-5 text-gradient-to-br from-blue-300 via-blue-500 to-purple-400" />
               </a>
               <a href="#" className="p-2 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
                 <Twitter className="w-5 h-5 text-travel-blue" />
@@ -84,3 +84,4 @@ export const Footer = () => {
     </footer>
   );
 };
+export default Footer;
