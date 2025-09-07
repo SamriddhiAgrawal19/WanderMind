@@ -1,6 +1,7 @@
 import Button from "./Button";
 import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,9 +48,11 @@ export const Header = () => {
             </a>
           </nav>
 
-          {/* CTA Buttons */}
+           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
+            <Link to = "/signin">
             <button className="font-medium">Sign In</button>
+            </Link>
             <button
   className="text-white px-6 py-2 rounded-md 
              bg-gradient-to-r from-blue-200 via-blue-500 to-purple-400
@@ -68,6 +71,7 @@ export const Header = () => {
             </button>
           </div>
         </div>
+  
 
         {/* Mobile Menu */}
         {isMenuOpen && (

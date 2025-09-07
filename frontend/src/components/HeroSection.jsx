@@ -3,6 +3,7 @@ import  Button  from "./Button";
 import travelLandmarksBg from "../assets/travel-landmarks-bg.jpg";
 import { Globe, MapPin, Plane, Compass } from "lucide-react";
 import { TravelIcon } from './TravelIcon';
+import { Link } from "react-router-dom";
 
 
 
@@ -51,10 +52,13 @@ const HeroSection = () => {
         </p>
         
         <div className="animate-fade-in-up-delay" style={{ animationDelay: '0.6s' }}>
+          <Link to = '/signin'>
           <Button size="lg" className="text-xl px-12 py-6 border-none">
             Start Planning
           </Button>
+          </Link>
         </div>
+        
       </div>
     </section>
   );
