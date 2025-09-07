@@ -1,7 +1,10 @@
-import UserModel from "../../models/UserSchema";
+import UserModel from "../models/UserSchema.js";
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+const JWT_SECRET = process.env.JWT_SECRET;
  export const signup = async(req , res)=>{
     try{
         const {name, email  , password} = req.body;
@@ -18,10 +21,10 @@ import jwt from "jsonwebtoken";
 
 
     } catch (error) {
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({ error: "Internal server error" , error });
     }
 }
-router.post("/signin", async (req, res, next) => {
+export const signin = async(req , res)=>{
   try {
     const { email, password } = req.body;
 
@@ -38,7 +41,7 @@ router.post("/signin", async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-});
+};
 export const getUserById = async (req, res, next) => {
   try {
     const user = await UserModel.findById(req.params.id);
